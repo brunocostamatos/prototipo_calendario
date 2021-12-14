@@ -14,8 +14,9 @@ export function CalendarioDiario(conteudo_prismic) {
     var dateTime = date
     var options = {  weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'};
     var prnDt = new Date().toLocaleTimeString('pt-br', options);
+   // console.log(new Date().toLocaleTimeString('pt-br', options))
+   // console.log("date",dateTime)
     console.log(new Date().toLocaleTimeString('pt-br', options))
-    console.log("date",dateTime)
     const dia_mes_semana = prnDt
     const dia_da_semana = dia_mes_semana.toString().split(',')
     setDateTime(dateTime)
@@ -37,7 +38,7 @@ export function CalendarioDiario(conteudo_prismic) {
       setDiaSemana(conteudo_prismic.conteudo_calendario.results[0].data.sexta_feira)
      
     }
-    if(dia_da_semana[0] === 'sabado'){
+    if(dia_da_semana[0] === 'sábado'){
       setDiaSemana(conteudo_prismic.conteudo_calendario.results[0].data.sabado)
      
     }
